@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Interior Consultant</title>
+    </head>
+    <body>
+        <header class="container page-header">
+            <div class="page__logo">
+                <p>This Interior</p>
+            </div>
+            <nav class="page-menu">
+                <ul class="page-menu-inner">
+                    <li class="page-menu-item">Home</li>
+                    <li class="page-menu-item">Collection</li>
+                    <li class="page-menu-item">About</li>
+                    <li class="page-menu-item">Contact</li>
+                </ul>
+            </nav>
+
+            <input type="checkbox" id="checkbox" class="checkbox" />
+            <label for="checkbox" class="checkbox-label">
+                <div class="hamburger-bar">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </label>
+
+            <section class="menu-mobile">
+                <label for="checkbox" class="checkbox--mobile">
+                    <div class="hamburger-bar--1">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </label>
+
+                <ul class="menu-mobile-inner">
+                    <li class="menu-mobile-item">Home</li>
+                    <li class="menu-mobile-item">Collection</li>
+                    <li class="menu-mobile-item">About</li>
+                    <li class="menu-mobile-item">Contact</li>
+                </ul>
+            </section>
+        </header>
+
+        <main class="container page-main">
+            <section class="page-main-text">
+                <h3 class="page-main__heading">
+                    Mordern interior
+                </h3>
+                <p class="page-main__description">
+                    A full-Service residential & commercial interior design and
+                    staging company offering professional organizing &
+                    eco-services.
+                </p>
+
+                <button class="page-main__button"
+                    >Read more
+
+                    <img src="./images/right-arrow.png" alt="" />
+                </button>
+            </section>
+
+            <section class="page-main-image">
+                <figure class="page-main__image-container">
+                    <img
+                        src="./images/background.png"
+                        alt="background"
+                        class="page-main__image"
+                    />
+                </figure>
+
+                <article class="user-card">
+                    <figure class="user-card__info">
+                        <img
+                            src="./images/avatar.png"
+                            alt="user-face"
+                            class="user-card__image"
+                        />
+
+                        <figcaption class="user-card__text-wrapper">
+                            <p class="user-card__name">Aliza Webber</p>
+                            <p class="user-card__jobTitle">Interior designer</p>
+                        </figcaption>
+                    </figure>
+
+                    <div class="user-card__additionalInfo">
+                        <p>Designed in 2020 by Aliza Webber</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

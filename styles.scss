@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {
+            // 600px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {
+            // 900px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) {
+            // 1200px
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        @media (max-width: 112.5em) {
+            // 1800px
+            @content;
+        }
+    }
+}
+
+body {
+    background: #181719;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    align-items: center;
+
+    @include respond(tab-port) {
+        margin-bottom: 30px;
+    }
+}
+
+.page__logo {
+    p {
+        border: 1px solid #fff;
+        color: #fff;
+        font-family: "Crimson Pro", serif;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        padding: 8px;
+    }
+}
+
+.page-menu {
+    @include respond(phone) {
+        display: none;
+    }
+
+    &-inner {
+        display: flex;
+    }
+
+    &-item {
+        list-style-type: none;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 86px;
+        }
+    }
+}
+
+.page-main {
+    display: flex;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    &-text {
+        width: 30%;
+        margin-right: 5%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__heading {
+        font-family: "Lora";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        color: #ffffff;
+        margin: 0;
+
+        @include respond(phone) {
+            font-size: 36px;
+        }
+    }
+
+    &__description {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        color: #ffffff;
+
+        @include respond(phone) {
+            font-size: 14px;
+        }
+    }
+
+    &__button {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: #ffffff;
+        background: transparent;
+        border: none;
+
+        @include respond(phone) {
+            font-size: 14px;
+        }
+    }
+
+    &-image {
+        flex: 1;
+        position: relative;
+    }
+
+    &__image-container {
+        margin: 0;
+    }
+
+    &__image {
+        width: 100%;
+        max-height: 600px;
+        object-fit: contain;
+
+        @include respond(phone) {
+            min-height: 400px;
+            object-fit: cover;
+        }
+    }
+}
+
+.user-card {
+    p {
+        margin: 0;
+    }
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background: #000;
+    color: #fff;
+    padding: 20px 14px 34px 20px;
+    padding-right: 50px;
+    transform: translate(-40%);
+
+    @include respond(phone) {
+        transform: translate(-10%, 40%);
+    }
+
+    @include respond(phone) {
+        left: 20%;
+        transform: translate(-5%);
+    }
+
+    &__info {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    &__image {
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    &__name {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 8px;
+
+        @include respond(phone) {
+            font-size: 12px;
+        }
+    }
+
+    &__jobTitle {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: #828282;
+
+        @include respond(phone) {
+            font-size: 10px;
+        }
+    }
+
+    &__additionalInfo {
+        font-family: "Lora";
+        font-weight: bold;
+        font-size: 24px;
+        color: #ffffff;
+
+        @include respond(phone) {
+            font-size: 18px;
+        }
+
+        p {
+            width: 70%;
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.checkbox {
+    display: none;
+
+    &-label {
+        display: none;
+
+        @include respond(phone) {
+            display: block;
+        }
+    }
+}
+
+.checkbox:checked ~ .menu-mobile {
+    @include respond(phone) {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        margin-left: -20px;
+        background: #000;
+        z-index: 1;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .checkbox--mobile {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+
+            .hamburger-bar--1 {
+                width: 30px;
+
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background: #fff;
+                    display: block;
+
+                    &:first-child {
+                        transform: rotate(45deg);
+                    }
+
+                    &:last-child {
+                        transform: rotate(135deg);
+                    }
+                }
+            }
+        }
+
+        .menu-mobile-inner {
+            padding: 0;
+
+            li {
+                font-family: "Montserrat";
+                font-weight: bold;
+                font-size: 18px;
+                color: #ffffff;
+                list-style-type: none;
+
+                &:not(:last-child) {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}
+
+.hamburger-bar {
+    display: none;
+
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+
+        span {
+            width: 100%;
+            height: 3px;
+            display: inline-block;
+            background: #fff;
+            margin-bottom: 5px;
+        }
+    }
+}

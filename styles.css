@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+body {
+  background: #181719;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 56.25em) {
+  .page-header {
+    margin-bottom: 30px;
+  }
+}
+
+.page__logo p {
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Crimson Pro", serif;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+@media (max-width: 37.5em) {
+  .page-menu {
+    display: none;
+  }
+}
+
+.page-menu-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-menu-item {
+  list-style-type: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.page-menu-item:not(:last-child) {
+  margin-right: 86px;
+}
+
+.page-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 56.25em) {
+  .page-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.page-main-text {
+  width: 30%;
+  margin-right: 5%;
+}
+
+@media (max-width: 56.25em) {
+  .page-main-text {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.page-main__heading {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media (max-width: 37.5em) {
+  .page-main__heading {
+    font-size: 36px;
+  }
+}
+
+.page-main__description {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+@media (max-width: 37.5em) {
+  .page-main__description {
+    font-size: 14px;
+  }
+}
+
+.page-main__button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+}
+
+@media (max-width: 37.5em) {
+  .page-main__button {
+    font-size: 14px;
+  }
+}
+
+.page-main-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.page-main__image-container {
+  margin: 0;
+}
+
+.page-main__image {
+  width: 100%;
+  max-height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 37.5em) {
+  .page-main__image {
+    min-height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.user-card {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #000;
+  color: #fff;
+  padding: 20px 14px 34px 20px;
+  padding-right: 50px;
+  -webkit-transform: translate(-40%);
+          transform: translate(-40%);
+}
+
+.user-card p {
+  margin: 0;
+}
+
+@media (max-width: 37.5em) {
+  .user-card {
+    -webkit-transform: translate(-10%, 40%);
+            transform: translate(-10%, 40%);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .user-card {
+    left: 20%;
+    -webkit-transform: translate(-5%);
+            transform: translate(-5%);
+  }
+}
+
+.user-card__info {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.user-card__image {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-card__name {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 37.5em) {
+  .user-card__name {
+    font-size: 12px;
+  }
+}
+
+.user-card__jobTitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #828282;
+}
+
+@media (max-width: 37.5em) {
+  .user-card__jobTitle {
+    font-size: 10px;
+  }
+}
+
+.user-card__additionalInfo {
+  font-family: "Lora";
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+@media (max-width: 37.5em) {
+  .user-card__additionalInfo {
+    font-size: 18px;
+  }
+}
+
+.user-card__additionalInfo p {
+  width: 70%;
+}
+
+@media (max-width: 56.25em) {
+  .user-card__additionalInfo p {
+    width: 100%;
+  }
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox-label {
+  display: none;
+}
+
+@media (max-width: 37.5em) {
+  .checkbox-label {
+    display: block;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .checkbox:checked ~ .menu-mobile {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    margin-left: -20px;
+    background: #000;
+    z-index: 1;
+    overflow-x: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .checkbox:checked ~ .menu-mobile .checkbox--mobile {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  .checkbox:checked ~ .menu-mobile .checkbox--mobile .hamburger-bar--1 {
+    width: 30px;
+  }
+  .checkbox:checked ~ .menu-mobile .checkbox--mobile .hamburger-bar--1 span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    display: block;
+  }
+  .checkbox:checked ~ .menu-mobile .checkbox--mobile .hamburger-bar--1 span:first-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .checkbox:checked ~ .menu-mobile .checkbox--mobile .hamburger-bar--1 span:last-child {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .checkbox:checked ~ .menu-mobile .menu-mobile-inner {
+    padding: 0;
+  }
+  .checkbox:checked ~ .menu-mobile .menu-mobile-inner li {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    list-style-type: none;
+  }
+  .checkbox:checked ~ .menu-mobile .menu-mobile-inner li:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.hamburger-bar {
+  display: none;
+}
+
+@media (max-width: 37.5em) {
+  .hamburger-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30px;
+  }
+  .hamburger-bar span {
+    width: 100%;
+    height: 3px;
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 5px;
+  }
+}
